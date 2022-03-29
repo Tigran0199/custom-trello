@@ -6,7 +6,7 @@ import {ValidateEmail , ValidatePassword} from '../../data/validator'
 
 
 function Register() {
-    const [input , setInput] = useState(localStorage.getItem("inputMail") || "")
+    const [input , setInput] = useState(localStorage.getItem("inputMail")+"/" || "")
     const [passInput , setPassInput] = useState("")
     const [alerts , setAlerts] = useState("")
     const [greenAlerts , setGreenAlerts] = useState("")
@@ -34,18 +34,21 @@ function Register() {
                 <div className={styles.alerts}>{alerts}</div>
                 <div className={styles.alertsGreen}>{greenAlerts}</div>
                 <button onClick={()=>{
-                    if(!(ValidatePassword(passInput)&&ValidateEmail(input))){
-                        setAlerts("Invalid E-mail , please check your inputs")
-                        localStorage.setItem("isLoggedIn" , false)
-                    }else{
-                        setAlerts("")
-                        setGreenAlerts("Well , redirecting...")
-                        setTimeout(()=>{
-                            navigate("/boards")
-                        } , 700)
-                        setPassPlace(true)
-                        localStorage.setItem("isLoggedIn" , true)
+                    if(!ValidateEmail(input)){
+                        setAlerts("Invalid E-mail address, please check your input")
                     }
+                    if(!ValidatePassword(passInput)){
+                        setAlerts(alerts + " \nInvalid password , please make it stronger")
+                    }
+                    if((ValidatePassword(passInput)&&ValidateEmail(input))){
+                            setAlerts("")
+                            setGreenAlerts("Well , redirecting...")
+                            setTimeout(()=>{
+                                navigate("/boards")
+                            } , 700)
+                            localStorage.setItem("isLoggedIn" , true)
+                    }
+
                 }} className={styles.button17}>Register</button>
                 <p>Password should have</p>
                 <ul>
