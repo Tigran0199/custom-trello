@@ -1,0 +1,19 @@
+.leftMenu{
+    width:10%;
+    height:100%;
+    display: flex;
+    margin-top: 100px ;
+    margin-left: 100px;
+    flex-direction: column;
+    justify-content: center;
+    border-right: 2px solid rgba(0, 0, 0, 0.26);
+}
+.menuItem{
+    margin: 0 10px;
+    text-align: left;
+    font-size: 20px;
+    cursor: pointer;
+}
+.menuItem:hover{
+    color: #0079bf;
+}
