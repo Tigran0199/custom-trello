@@ -1,0 +1,37 @@
+{
+  "TicTacToe": {
+    "To-do": [
+      {
+        "title": "Make Board",
+        "description": "Make responsive playing board",
+        "priority": "medium",
+        "status": "free"
+      }
+    ],
+    "Doing": [
+      {
+        "title": "Make hidden gifts",
+        "description": "Making gifts for users when they win more then 5 times",
+        "priority": "low",
+        "status": "attached",
+        "users": "user1,user3"
+      }
+    ],
+    "Done": [
+      {
+        "title": "Make login page",
+        "description": "Make responsive login page for users",
+        "priority": "high",
+        "status": "attached",
+        "users": "user1,user2,user3"
+      },
+      {
+        "title": "FIX register button bug",
+        "description": "There is a bug when user pushes button and then nothing happened",
+        "priority": "high",
+        "status": "attached",
+        "users": "user2"
+      }
+    ]
+  }
+}
