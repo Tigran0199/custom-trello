@@ -1,0 +1,76 @@
+.section{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: flex-start;
+    gap: 10px;
+}
+.workPlace{
+    padding: 10px;
+}
+.cardItem{
+    width: 15%;
+    height: max-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 10px;
+    text-align: left;
+    border: 2px solid whitesmoke;
+
+}
+.mainContent{
+    margin: 5px;
+    background-color: #99d8ec;
+    border-radius: 10px;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.mainContent:hover{
+    background-color: #83b8cb;
+}
+.mainContentTop{
+    display: flex;
+    justify-content: space-between;
+}
+.mainContentTop h6{
+    height: 30px;
+}
+.editButton{
+    display: none;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    transition: 0.3s;
+}
+.mainContent:hover .editButton{
+    display: block;
+}
+.mainContentBottom{
+    display: flex;
+    justify-content: space-between;
+}
+.mainContentBottomButton{
+    border-radius: 50%;
+}
+.mainContentBottomImg{
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+}
+
+/*  Buttons   */
+
+
+.addListButton{
+    width: 15%;
+    height: 30px;
+    background-color: transparent;
+    text-align: left;
+    padding: 2px;
+    border-radius: 5px;
+}

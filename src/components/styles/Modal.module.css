@@ -1,0 +1,27 @@
+.modalBack {
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.353);
+  right: 0;
+  top: 0;
+  position: absolute;
+}
+.modalCenter {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  z-index: 10;
+  left: 50%;
+  transform: translate(-50%, 0);
+
+}
+.modalContent {
+  overflow: hidden;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  padding: 5px;
+  background-color: white;
+}
