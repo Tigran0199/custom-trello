@@ -1,8 +1,9 @@
 import {BrowserRouter , Route , Routes} from "react-router-dom";
 import MainPage from "./components/modules/MainPage";
 import SignInUp from "./components/modules/SIgnInUp";
-import './App.css';
 import Boards from "./components/modules/Boards";
+import WorkBoard from "./components/modules/WorkBoard";
+import './App.css';
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
           <Route path="/register" element={<SignInUp type="register" />}/>
           <Route path="/login" element={<SignInUp type="login" />}/>
           <Route path="/boards" element={<Boards />}/>
+          <Route path="/myBoard" element={<WorkBoard />} />
         </Routes>
       </BrowserRouter>
   )
