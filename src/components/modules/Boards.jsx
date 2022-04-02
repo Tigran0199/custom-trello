@@ -1,4 +1,4 @@
-import React , {useEffect}  from "react";
+import React , {useEffect , useState}  from "react";
 import BoardsHeader from "./prePages/BoardsHeader";
 import BoardsLeftMenu from "./BoardsLeftMenu";
 import BoardsCentralMenu from "./BoardsCentralMenu";
@@ -10,13 +10,13 @@ function Boards() {
         if(!localStorage.getItem("isLoggedIn")){
             navigate("/")
         }
-    });
+    },[]);
   return (
       <>
           <BoardsHeader />
           <div className="flex">
-          <BoardsLeftMenu />
-          <BoardsCentralMenu  />
+            <BoardsLeftMenu />
+            <BoardsCentralMenu title={"Tic Tac toe"} />
           </div>
 </>
   );
