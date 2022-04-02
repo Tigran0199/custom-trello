@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState , useEffect} from 'react';
 import styles from '../../styles/LoginPage.module.css'
 import {useNavigate} from "react-router-dom";
 import {ValidateEmail , ValidatePassword} from '../../data/validator'
@@ -6,7 +6,7 @@ import {ValidateEmail , ValidatePassword} from '../../data/validator'
 
 
 function Register() {
-    const [input , setInput] = useState(localStorage.getItem("inputMail")+"/" || "")
+    const [input , setInput] = useState(localStorage.getItem("inputMail") || "")
     const [passInput , setPassInput] = useState("")
     const [alerts , setAlerts] = useState("")
     const [greenAlerts , setGreenAlerts] = useState("")
@@ -18,6 +18,12 @@ function Register() {
             setPassPlace(true)
         }
     }
+    useEffect(() => {
+            if (ValidateEmail(input)){
+                setPassPlace(true)
+            }
+    });
+
     return (
         <section className={styles.loginSection}>
             <div className={styles.firstIllustration}>
@@ -48,7 +54,6 @@ function Register() {
                             } , 700)
                             localStorage.setItem("isLoggedIn" , true)
                     }
-
                 }} className={styles.button17}>Register</button>
                 <p>Password should have</p>
                 <ul>
